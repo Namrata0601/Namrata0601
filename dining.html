@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+
+        <!--Filter side bar and products starts-->
+    <div class="row mt-4 mx-4">
+        <div class="col-md-3 my-4 bg-light p-5 text-primary-emphasis">
+            <h3>Filter By</h3>
+            <hr>
+            <h5 class="text-primary-emphasis">Category</h5>
+            <p><a class="category text-decoration-none text-warning-emphasis" href="/catfilter/1">Veg Special</a></p>
+            <p><a class="category text-decoration-none text-warning-emphasis" href="/catfilter/2">Non-Veg Special</a></p>
+            <p><a class="category text-decoration-none text-warning-emphasis" href="/catfilter/3">Dessert</a></p>
+            <p><a class="category text-decoration-none text-warning-emphasis" href="/catfilter/4">Pizza's</a></p>
+            <p><a class="category text-decoration-none text-warning-emphasis" href="/catfilter/5">Burgers</a></p>
+            <p><a class="category text-decoration-none text-warning-emphasis" href="/catfilter/6">Beverages</a></p>
+            <br>
+            <br>
+            <h5 class="text-primary-emphasis">Price Range</h5>
+            <hr>
+            <form action="/range">
+                <div class="mb-3">
+                    <label for="Input1" class="form-label text-warning-emphasis">Min Value</label>
+                    <input type="number" name="min"class="form-control text-warning-emphasis" id="Input1" placeholder="Minimum Value">
+                </div>
+
+                <div class="mb-3">
+                    <label for="Input2" class="form-label text-warning-emphasis">Max Value</label>
+                    <input type="number" name="max" class="form-control text-warning-emphasis" id="Input2" placeholder="Maximum Value">
+                </div>
+                <br>
+
+                <div class="mb-3">
+                    <input type="submit" class="btn btn-success" value="Apply Filter">
+                </div>
+                <br>
+                <br>
+                </form>
+                <h5 class="text-warning-emphasis ">Sort by Price</h5>
+                <hr>
+                <p><a href="/sort/0" class="Category text-decoration-none text-warning-emphasis">Low to High</a></p>
+                <p><a href="/sort/1" class="Category text-decoration-none text-warning-emphasis">High to Low</a></p>
+            </div><!--Filter side bar ends-->
+        
+          <!--Products details div Starts-->
+        <div class="col-md-9">
+            <div class="row">
+                {% for x in products %}
+                <div class="col-md-3 mt-4">
+                    <div class="card" style="width: 100%;">
+                        <img src="{{x.pimage.url}}" width="100%" height="200px" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{x.name}}</h5>
+                            <p class="card-text">Rs.{{x.price}}</p>
+                            
+                            {% if x.cat == 1 %}
+                                <p class="card-text">Veg</p>
+                            {% elif x.cat == 2 %}
+                                <p class="card-text">Non-Veg</p>
+                            {% elif x.cat == 3 %}
+                                <p class="card-text">Dessert</p>  
+                            {% elif x.cat == 4 %}
+                                <p class="card-text">Pizzas</p>                                                          
+                            {% elif x.cat == 5 %}
+                                <p class="card-text">Burger</p>
+                            {% else %}
+                                <p class="card-text">Beverages</p>                                                          
+                            {% endif %}                               
+                                                         
+                            <a href="/menu_details/{{x.id}}" class="btn btn-success">See Details</a>
+                        </div>
+                    </div>
+                </div> 
+                {% endfor %}    <!--Product 1 Ends-->
+                </div>
+              </div>
+            
+               
+            </div><!--Products ends-->
+{% endblock 'main' %}

@@ -1,0 +1,102 @@
+{% load static %}
+  <html lang="en">
+    <head>
+      <title>The Silver Molten</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+     <!-- Bootstrap 5 CDN Links -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+     <!-- Link Swiper's CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  
+     <!-- Custom File's Link -->
+     <link rel="stylesheet" href="{% static 'asset/css/style.css' %}">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> <!--To add Icons for sb, insta, twitter in footer-->
+     <link href="{% static 'asset/css/bootstrap.min.css' %}" rel="stylesheet">
+     
+    </head>
+    <body>
+       <!-- Navbar section -->
+       <header class="header_wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'asset/images/logo1.jpeg' %}" alt="logo" width="60" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-stream navbar-toggler-icon"></i>
+                </button>
+  
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav menu-navbar-nav">
+                        <li class="nav-item mt-2">
+                            <a class="nav-link active" aria-current="page" href="/home">HOME</a>
+                        </li>
+                            
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="/dining">DINING</a>
+                        </li> 
+                        
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="/about">ABOUT US</a>
+                        </li>
+  
+                        <li class="nav-item dropdown mt-2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                ROOMS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="/suite">SUITE</a></li>
+                                <li><a class="dropdown-item" href="/deluxe">DELUXE</a></li>
+                                <li><a class="dropdown-item" href="/super_deluxe">SUPER DELUXE</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item mt-1">
+                            <a class="nav-link" href="/viewcart"><img src="{% static 'asset/images/cart_icon1.jpg' %}" width="42px" height="38px">CART</a>
+                        </li>                        
+  
+                       <!-- <li class="nav-item">
+                            <a class="nav-link" href="/contact_us">CONTACT US</a>
+                        </li>
+                    -->
+  
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="/services">SERVICES</a>
+                        </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="/logout">LOGOUT</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item mt-1">
+                            <a class="nav-link" href="/login"><img src="{% static 'asset/images/Log_In_Icon.jpg' %}" width="42px" height="38px"></a>
+                         </li>
+
+                        <li class="nav-item mt-2">
+                            <a class="nav-link" href="/register">Register</a>
+                        </li>
+
+                    {% endif %}  
+
+                      <li class="nav-item mt-2">
+                        <a class="nav-link" href="/gallery">GALLERY</a>
+                      </li>
+                      
+                      <li class="nav-item mt-2 ">
+                          <a class="main-btn text-decoration-none" href="/booking">BOOK NOW</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+  <!-- END header -->
+
+        
+        
+        

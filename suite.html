@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+    <!-- Rooms section -->
+    <section id="rooms" class="rooms_wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 section-title text-center mb-5">
+                    <h6>What I can do for you</h6>
+                    <h3>Our Favorite Rooms</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 mx-5 mb-4 my-6">
+                    <div class="room-item">
+                        <img src="{% static 'asset/images/suite.jpg' %}" height="525px">
+                        <div class="room-item-wrap">
+                            <div class="room-content">
+                                <h5 class="text-white mb-lg-5 text-decoration-underline">Royal Suite (without Air-Condition)</h5>
+                                <p class="text-white">Indulge in our luxurious rooms that are equipped for the whole day with amenities like free Wi-Fi, bath tub with hot water boiler for a luxurious shower, and a fully-stocked mini-fridge for your convenience.</p>
+                                <p class="text-white fw-bold mt-lg-4">Rs.1400 / Per Night</p>
+                                <a class="main-btn border-white text-white mt-lg-5 text-decoration-none" href="/booking">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 mx-2 my-5 " style="background-color: #f2f2f2; padding:30px; border-radius: 10px;">
+                    <h2 class="bg-body-secondary mx-2"style="padding:10px; border-radius:5px;">Amenities</h2>
+                    <br>
+                    <ul type="square">
+                        <li>Multi Cuisine Restaurant</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Breakfast / Lunch / Dinner</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Bandobast- The Upper Deck</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Roof Top Restaurant</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Fine Dine Restaurant</li>
+                    </ul>
+                    <ul type="square">
+                        <li>In-Room Dining</li>
+                    </ul>
+                </div>
+            
+                <div class="col-md-3 my-5" style="background-color: #f2f2f2; padding: 30px; border-radius: 10px;">
+                    <h2 class="bg-body-secondary mx-2"style="padding:10px; border-radius:5px;">Services</h2>
+                    <br>
+                    <ul type="square">
+                        <li>Laundry</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Room Service</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Housekeeping</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Free Wifi In Rooms</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Shower</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-5 mx-5 mb-4 my-6">
+                    <div class="room-item">
+                        <img src="{% static 'asset/images/ac suite.jpg' %}" height="525px">
+                        <div class="room-item-wrap">
+                            <div class="room-content">
+                                <h5 class="text-white mb-lg-5 text-decoration-underline">Royal Suite (with Air-Condition)</h5>
+                                <p class="text-white">Indulge in our luxurious rooms that are equipped with air conditioning for the whole day, along with amenities like free Wi-Fi, a bath tub with a hot water boiler for a luxurious shower, and a fully-stocked mini-fridge for your convenience.</p>
+                                <p class="text-white fw-bold mt-lg-4">Rs.1850 / Per Night</p>
+                                <a class="main-btn border-white text-white mt-lg-5 text-decoration-none" href="/booking">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 mx-2 my-5" style="background-color: #f2f2f2; padding: 30px; border-radius: 10px;">
+                    <h2 class="bg-body-secondary mx-2"style="padding:10px; border-radius:5px;">Amenities</h2>
+                    <br>
+                    <ul type="square">
+                        <li>Air conditioning Facility</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Multi Cuisine Restaurant</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Breakfast / Lunch / Dinner</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Bandobast- The Upper Deck</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Roof Top Restaurant</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Fine Dine Restaurant</li>
+                    </ul>
+                    <ul type="square">
+                        <li>In-Room Dining</li>
+                    </ul>
+                </div>
+            
+                <div class="col-md-3 my-5" style="background-color: #f2f2f2; padding: 30px; border-radius: 10px">
+                    <h2 class="bg-body-secondary mx-2"style="padding:10px; border-radius:5px;">Services</h2>
+                    <br>
+                    <ul type="square">
+                        <li>Laundry</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Room Service</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Housekeeping</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Free Wifi In Rooms</li>
+                    </ul>
+                    <ul type="square">
+                        <li>Shower</li>
+                    </ul>
+                </div>
+            </div>
+            
+    </section>
+    <body>
+
+         <!-- Room Facility Ends -->
+
+
+{% endblock 'main' %}
